@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+
+from projmaker import autotooler
+
+maker = autotooler.AutoTooler()
+maker.ask_questions()
+maker.run_autotools()

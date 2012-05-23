@@ -1,0 +1,8 @@
+$project_name NEWS
+For more information, visit https://github.com/$username/$package_name
+
+version $version - $date
+
+* Project created
+
+$project_name was created by $name.

@@ -1,0 +1,2 @@
+bin_PROGRAMS=$exec_name
+${exec_name}_SOURCES=src/main.c
