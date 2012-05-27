@@ -42,7 +42,7 @@ class AutoTooler:
             "What is your project's initial version?")
         self._p['username'] = get_answer("What is your GitHub username?")
 
-    def run_autotools(self):
+    def run(self):
         self._p['underline'] = "=" * len(self._p['project_name'])
         self._p['date'] = datetime.date.today().isoformat()
         self._p['year'] = str(datetime.date.today().year)

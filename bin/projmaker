@@ -1,7 +1,20 @@
 #!/usr/bin/python3
 
+import sys
 from projmaker import autotooler
+from projmaker import simplec
 
-maker = autotooler.AutoTooler()
+if len(sys.argv) != 2:
+    print("usage: %s <type>" % sys.argv[0], file=sys.stderr)
+    exit(1)
+
+maker = None
+if sys.argv[1] == 'simplec':
+    maker = simplec.SimpleC()
+elif sys.argv[1] == 'autotooler':
+    maker = autotooler.AutoTooler()
+if maker is None:
+   print("Invalid type!", file=sys.stderr)
+   exit(2)
 maker.ask_questions()
-maker.run_autotools()
+maker.run()
