@@ -1,0 +1,11 @@
+projmaker
+=========
+
+A simple program to make projects.
+
+Currently it supports two types of projects:
+autotooler - A GNU autotools setup with autoconf and automake.
+simplec - A simple C file & Makefile setup for small C programs.
+
+Usage:
+projmaker <type>
