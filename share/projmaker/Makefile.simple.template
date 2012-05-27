@@ -1,0 +1,16 @@
+CC=gcc
+CFLAGS=-c -Wall -g -O2 -std=gnu99
+LDFLAGS=
+${exec_name}_SOURCES=${exec_name}.c
+${exec_name}_OBJECTS=$$(${exec_name}_SOURCES:.c=.o)
+
+all: $exec_name
+
+${exec_name}: $$(${exec_name}_OBJECTS) 
+	$$(CC) $$(LDFLAGS) $$(${exec_name}_OBJECTS) -o $$@
+
+.c.o:
+	$$(CC) $$(CFLAGS) $$< -o $$@
+
+clean:
+	rm -f *.o $exec_name
